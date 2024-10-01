@@ -1,4 +1,5 @@
 ﻿using Unify.Application.Common;
+using Unify.Application.Requests;
 
 namespace Unify.Application.Validators
 {
@@ -11,9 +12,9 @@ namespace Unify.Application.Validators
             _notifier = notifier;   
         }
 
-        public override T ValidateAsync<T>(T model)
+        public override TResponse ValidateAsync<TResponse>(SendNotificationRequest model)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
