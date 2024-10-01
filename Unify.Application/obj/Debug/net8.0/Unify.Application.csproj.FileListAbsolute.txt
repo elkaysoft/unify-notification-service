@@ -1,0 +1,15 @@
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\bin\Debug\net8.0\Unify.Application.deps.json
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\bin\Debug\net8.0\Unify.Application.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\bin\Debug\net8.0\Unify.Application.pdb
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\bin\Debug\net8.0\Unify.Persistence.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\bin\Debug\net8.0\Unify.Persistence.pdb
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.csproj.AssemblyReference.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.AssemblyInfoInputs.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.AssemblyInfo.cs
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.csproj.CoreCompileInputs.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.csproj.CopyComplete
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\refint\Unify.Application.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\Unify.Application.pdb
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Application\obj\Debug\net8.0\ref\Unify.Application.dll

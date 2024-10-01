@@ -1,0 +1,6 @@
+@Unify.Scheduler_HostAddress = http://localhost:5224
+
+GET {{Unify.Scheduler_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

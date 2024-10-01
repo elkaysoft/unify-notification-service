@@ -1,0 +1,12 @@
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\bin\Debug\net8.0\Unify.Persistence.deps.json
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\bin\Debug\net8.0\Unify.Persistence.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\bin\Debug\net8.0\Unify.Persistence.pdb
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.csproj.AssemblyReference.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.AssemblyInfoInputs.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.AssemblyInfo.cs
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\refint\Unify.Persistence.dll
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\Unify.Persistence.pdb
+C:\Users\Olamilekan Kareem\source\repos\unify-notifications-management\Unify.Persistence\obj\Debug\net8.0\ref\Unify.Persistence.dll
