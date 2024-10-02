@@ -5,6 +5,6 @@ namespace Unify.Application.Interface
 {
     public interface INotificationService
     {
-        Task<BaseResponse> SendNotification(SendNotificationRequest request, CancellationToken cancellationToken);
+        Task<BaseResponse> SendNotification(SendNotificationRequest request);
     }
 }

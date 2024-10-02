@@ -29,8 +29,8 @@ namespace Unify.Application.Common
         {
             _notifications.AddRange(notifications);
         }
-
-        public IReadOnlyCollection<Notification> GetNotifications() => _notifications.AsReadOnly();
+       
+        public string GetNotifications() => string.Join(',', _notifications.Select(x => x.Message).ToList());
 
         public bool hasNotifications() => _notifications.Any();
 

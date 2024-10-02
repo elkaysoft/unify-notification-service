@@ -17,9 +17,9 @@ namespace Unify.Api.Controllers
         }
 
         [HttpPost("send-notification")]
-        public async Task<IActionResult> SendNotification(SendNotificationRequest model, CancellationToken cancellationToken)
+        public async Task<IActionResult> SendNotification(SendNotificationRequest model)
         {
-            var result = await _notificationService.SendNotification(model, cancellationToken);
+            var result = await _notificationService.SendNotification(model);
             if(result.IsSuccessful) 
                 return Ok(result);
 

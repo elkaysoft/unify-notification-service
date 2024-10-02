@@ -9,27 +9,32 @@ namespace Unify.Application.Implementation
 {
     public class NotificationService : INotificationService
     {
-        public async Task<BaseResponse> SendNotification(SendNotificationRequest request, CancellationToken cancellationToken)
+        private readonly Notifier _notifier;
+
+        public NotificationService(Notifier notifier)
+        {
+            _notifier = notifier;
+        }
+
+        public async Task<BaseResponse> SendNotification(SendNotificationRequest request)
         {
             var response = new BaseResponse();
 
             try
             {
-                var validator = new SendNotificationValidator();
-                var validationResult = await validator.ValidateAsync(request, cancellationToken);
-                if (validationResult.Errors.Any()) throw new ValidationException(validationResult);
+                var validator = new SendNotificationValidationRules(_notifier);
+                validator.Validate(request);
+                if (_notifier.hasNotifications()) return Responses.Failed(_notifier.GetNotifications());
+
 
 
                 response.Message = Constants.SuccessResponse;
                 response.IsSuccessful = true;
             }
-            catch(ValidationException vEx)
-            {
-                response.Message = vEx.Message;
-            }
             catch (Exception ex)
             {
                 response.Message = Constants.ErrorResponse;
+                ex.ToString();
             }
 
             return response;
