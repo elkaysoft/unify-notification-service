@@ -9,7 +9,7 @@ namespace Unify.Persistence.Entities
         public required string TemplateName { get; set; }
         public required string Subject { get; set; }
         public required string Body { get; set; }
-        public NotificationTypes NotificationTypeId { get; set; } = default!;
+        public long NotificationTypeId { get; set; } = default!;
         public ChannelType Channel { get; set; }
         public bool HasAttachment { get; set; }
         public DateTime? DateModified { get; set; }

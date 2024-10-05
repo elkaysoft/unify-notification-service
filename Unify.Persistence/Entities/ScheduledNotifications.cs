@@ -19,8 +19,7 @@ namespace Unify.Persistence.Entities
         public NotificationFrequency Frequency { get; set; }
         public required DateTime ScheduledDateTime { get; set; }
         public required ChannelType Channel { get; set; }
-        public NotificationStatus Status { get; set; }
-        public int RetriesLeft { get; set; }
+        public NotificationStatus Status { get; set; }        
         public string? Attachments { get; set; }
 
     }

@@ -15,5 +15,6 @@ namespace Unify.Persistence.Entities
         public DateTime? DeliveryDate { get; set; }
         public string? Attachments { get; set; }
         public required NotificationStatus Status { get; set; }
+        public int RetryCount { get; set; }
     }
 }

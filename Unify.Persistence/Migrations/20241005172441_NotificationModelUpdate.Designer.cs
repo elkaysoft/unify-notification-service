@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Unify.Persistence;
@@ -11,9 +12,11 @@ using Unify.Persistence;
 namespace Unify.Persistence.Migrations
 {
     [DbContext(typeof(UnifyNotificationContext))]
-    partial class UnifyNotificationContextModelSnapshot : ModelSnapshot
+    [Migration("20241005172441_NotificationModelUpdate")]
+    partial class NotificationModelUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,8 +39,7 @@ namespace Unify.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("CreatedByIp")
                         .IsRequired()
@@ -54,17 +56,14 @@ namespace Unify.Persistence.Migrations
 
                     b.Property<string>("FileName")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)");
+                        .HasColumnType("text");
 
                     b.Property<string>("FileUrl")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("text");
@@ -89,15 +88,12 @@ namespace Unify.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Channel")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("character varying(20)");
+                    b.Property<int>("Channel")
+                        .HasColumnType("integer");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("CreatedByIp")
                         .IsRequired()
@@ -113,9 +109,7 @@ namespace Unify.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("text");
@@ -123,19 +117,20 @@ namespace Unify.Persistence.Migrations
                     b.Property<string>("ModifiedByIp")
                         .HasColumnType("text");
 
-                    b.Property<long>("NotificationTypeId")
+                    b.Property<long>("NotificationTypeIdId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Subject")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasColumnType("text");
 
                     b.Property<string>("TemplateName")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NotificationTypeIdId");
 
                     b.ToTable("NotificationTemplates", "UserPreference");
                 });
@@ -154,8 +149,7 @@ namespace Unify.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("CreatedByIp")
                         .IsRequired()
@@ -168,13 +162,10 @@ namespace Unify.Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("text");
@@ -184,14 +175,18 @@ namespace Unify.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)");
+                        .HasColumnType("text");
+
+                    b.Property<long>("NotificationTypeIdId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Subject")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NotificationTypeIdId");
 
                     b.ToTable("NotificationTypes", "UserPreference");
                 });
@@ -210,10 +205,8 @@ namespace Unify.Persistence.Migrations
                     b.Property<string>("CC")
                         .HasColumnType("text");
 
-                    b.Property<string>("ChannelType")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("character varying(15)");
+                    b.Property<int>("ChannelType")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("timestamp with time zone");
@@ -222,9 +215,7 @@ namespace Unify.Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("MessageContent")
                         .IsRequired()
@@ -234,25 +225,16 @@ namespace Unify.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("RetryCount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasDefaultValue(0);
-
                     b.Property<string>("Sender")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasColumnType("text");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("character varying(15)");
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Subject")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -273,10 +255,8 @@ namespace Unify.Persistence.Migrations
                     b.Property<string>("CC")
                         .HasColumnType("text");
 
-                    b.Property<string>("Channel")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("character varying(20)");
+                    b.Property<int>("Channel")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -285,41 +265,58 @@ namespace Unify.Persistence.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Frequency")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("character varying(30)");
+                    b.Property<int>("Frequency")
+                        .HasColumnType("integer");
 
                     b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Recipient")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("RetriesLeft")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("ScheduledDateTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Sender")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasColumnType("text");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("character varying(15)");
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Subject")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.ToTable("ScheduledNotifications", "public");
+                });
+
+            modelBuilder.Entity("Unify.Persistence.Entities.NotificationTemplates", b =>
+                {
+                    b.HasOne("Unify.Persistence.Entities.NotificationTypes", "NotificationTypeId")
+                        .WithMany()
+                        .HasForeignKey("NotificationTypeIdId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NotificationTypeId");
+                });
+
+            modelBuilder.Entity("Unify.Persistence.Entities.NotificationTypes", b =>
+                {
+                    b.HasOne("Unify.Persistence.Entities.NotificationTypes", "NotificationTypeId")
+                        .WithMany()
+                        .HasForeignKey("NotificationTypeIdId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NotificationTypeId");
                 });
 #pragma warning restore 612, 618
         }

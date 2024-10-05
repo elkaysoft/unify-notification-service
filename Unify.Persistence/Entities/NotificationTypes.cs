@@ -10,7 +10,6 @@ namespace Unify.Persistence.Entities
         public required string Subject { get; set; }
         public required string Body { get; set; }
 
-        public required NotificationTypes NotificationTypeId { get; set; }
 
         public DateTime? DateModified { get; set; }
         public string? ModifiedBy { get; set; }

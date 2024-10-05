@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Unify.Persistence;
@@ -11,9 +12,11 @@ using Unify.Persistence;
 namespace Unify.Persistence.Migrations
 {
     [DbContext(typeof(UnifyNotificationContext))]
-    partial class UnifyNotificationContextModelSnapshot : ModelSnapshot
+    [Migration("20241005173511_NotificationModelUpdate2")]
+    partial class NotificationModelUpdate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,11 +237,6 @@ namespace Unify.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("RetryCount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasDefaultValue(0);
-
                     b.Property<string>("Sender")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -298,6 +296,9 @@ namespace Unify.Persistence.Migrations
                     b.Property<string>("Recipient")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("RetriesLeft")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("ScheduledDateTime")
                         .HasColumnType("timestamp with time zone");

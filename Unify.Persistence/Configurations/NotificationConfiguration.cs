@@ -16,6 +16,8 @@ namespace Unify.Persistence.Configurations
             builder.Property(x => x.Recipient).IsRequired();
             builder.Property(x => x.Sender).IsRequired().HasMaxLength(100);
             builder.Property(x => x.IsDeleted).IsRequired().HasDefaultValue(false);
+            builder.Property(x => x.ChannelType).HasConversion<string>().IsRequired().HasMaxLength(15);
+            builder.Property(x => x.RetryCount).HasDefaultValue(0);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using Unify.Persistence.Entities;
 
 namespace Unify.Persistence
@@ -8,6 +9,13 @@ namespace Unify.Persistence
         public UnifyNotificationContext(DbContextOptions options)
             :base(options)
         {            
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly(), p => p.Namespace == "Unify.Persistence.Configurations");
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Notifications> Notifications { get; set; }
