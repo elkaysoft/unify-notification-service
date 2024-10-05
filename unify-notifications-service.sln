@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unify.Api", "Unify.Api\Unify.Api.csproj", "{5281CD67-308E-4409-B044-4BB43CA87751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unify.Api", "Unify.Api\Unify.Api.csproj", "{5281CD67-308E-4409-B044-4BB43CA87751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unify.Application", "Unify.Application\Unify.Application.csproj", "{C2CC0780-DE76-42F5-9666-8851D17E8A2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unify.Application", "Unify.Application\Unify.Application.csproj", "{C2CC0780-DE76-42F5-9666-8851D17E8A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unify.Scheduler", "Unify.Scheduler\Unify.Scheduler.csproj", "{A195293A-0B4F-4BE2-9B69-5041C6D5F582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unify.Scheduler", "Unify.Scheduler\Unify.Scheduler.csproj", "{A195293A-0B4F-4BE2-9B69-5041C6D5F582}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{52DB6B3A-5841-4882-B6AA-9F8D7C1918DD}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackgroundWorker", "Backgro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2A0C42B6-7458-4503-8F02-B8CEA46246E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unify.Persistence", "Unify.Persistence\Unify.Persistence.csproj", "{F7657C11-C69E-4186-A4B6-02DC1EEA3DB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unify.Persistence", "Unify.Persistence\Unify.Persistence.csproj", "{F7657C11-C69E-4186-A4B6-02DC1EEA3DB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

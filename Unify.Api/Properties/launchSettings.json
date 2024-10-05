@@ -26,7 +26,8 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7145;http://localhost:5212",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString": "User ID=postgres;Password=PCGreen2023$;Server=localhost;Port=5432;Database=UnifyNotification_dB"
       }
     },
     "IIS Express": {

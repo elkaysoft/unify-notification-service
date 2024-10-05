@@ -13,7 +13,7 @@
         /// <summary>
         /// Sets the list of attachment url
         /// </summary>
-        public List<string>? Attachments { get; set; }
+        public List<byte>? Attachments { get; set; }
 
     }
 }
