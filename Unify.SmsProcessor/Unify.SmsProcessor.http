@@ -1,0 +1,6 @@
+@Unify.SmsProcessor_HostAddress = http://localhost:5092
+
+GET {{Unify.SmsProcessor_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -15,7 +15,6 @@ namespace Unify.Persistence.DAL
 
         public async Task AddNotification(NotificationRequestLog notification)
         {
-            connectionString = Environment.GetEnvironmentVariable("ConnectionString");
             var notificationParams = new 
             {
                 recipient = notification.Recipient,
@@ -68,5 +67,6 @@ namespace Unify.Persistence.DAL
                 ex.ToString();
             }
         }
+    
     }
 }
